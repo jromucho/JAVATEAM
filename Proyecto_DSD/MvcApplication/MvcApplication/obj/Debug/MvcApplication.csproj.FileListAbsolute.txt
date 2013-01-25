@@ -1,5 +1,0 @@
-D:\Victor\Proyecto_DSD\MvcApplication\MvcApplication\bin\MvcApplication.dll
-D:\Victor\Proyecto_DSD\MvcApplication\MvcApplication\bin\MvcApplication.pdb
-D:\Victor\Proyecto_DSD\MvcApplication\MvcApplication\obj\Debug\ResolveAssemblyReference.cache
-D:\Victor\Proyecto_DSD\MvcApplication\MvcApplication\obj\Debug\MvcApplication.dll
-D:\Victor\Proyecto_DSD\MvcApplication\MvcApplication\obj\Debug\MvcApplication.pdb
