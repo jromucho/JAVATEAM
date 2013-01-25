@@ -1,0 +1,5 @@
+D:\Victor\Proyecto_DSD\MvcApplication\WebService\bin\WebService.dll
+D:\Victor\Proyecto_DSD\MvcApplication\WebService\bin\WebService.pdb
+D:\Victor\Proyecto_DSD\MvcApplication\WebService\obj\Debug\ResolveAssemblyReference.cache
+D:\Victor\Proyecto_DSD\MvcApplication\WebService\obj\Debug\WebService.dll
+D:\Victor\Proyecto_DSD\MvcApplication\WebService\obj\Debug\WebService.pdb
