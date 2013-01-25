@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="buscarpersonaPorDNI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dni" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoDocumento" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="buscarpersonaPorDNIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="buscarpersonaPorDNIResult" type="tns:PersonaDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PersonaDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="feNaci" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="feUsuaCrea" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="feUsuaModi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idUsuaCrea" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idUsuaModi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="inEstd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="inSexo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="txApeMtno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="txApePtno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="txDire" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="txMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="txNomb" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="txNumDocu" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="txTermCrea" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="txTermModi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ubigeoCompleto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idDpto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="noDpto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idProv" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="noProv" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idDist" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="noDist" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idTipoPersona" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="noTipoPersona" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idTipoDocumento" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="noTipoDocumento" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idEstadoCivil" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="noEstadoCivil" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="buscarpersonaPorDNISoapIn">
+    <wsdl:part name="parameters" element="tns:buscarpersonaPorDNI" />
+  </wsdl:message>
+  <wsdl:message name="buscarpersonaPorDNISoapOut">
+    <wsdl:part name="parameters" element="tns:buscarpersonaPorDNIResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="buscarpersonaPorDNI">
+      <wsdl:input message="tns:buscarpersonaPorDNISoapIn" />
+      <wsdl:output message="tns:buscarpersonaPorDNISoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="buscarpersonaPorDNI">
+      <soap:operation soapAction="http://tempuri.org/buscarpersonaPorDNI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="buscarpersonaPorDNI">
+      <soap12:operation soapAction="http://tempuri.org/buscarpersonaPorDNI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://localhost:3689/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://localhost:3689/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
